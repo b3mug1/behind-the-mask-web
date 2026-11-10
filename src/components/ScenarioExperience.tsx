@@ -33,6 +33,7 @@ export function ScenarioExperience() {
           <h3>Your identity may be hidden.<br /><em>Your choices still matter.</em></h3>
           <p>There is no score here. The point is to pause, notice who may be affected, and choose a response you can stand behind.</p>
           <button type="button" className="button button-blue" onClick={restart}><RotateCcw size={17} aria-hidden="true" /> Try Again</button>
+          <a className="button button-outline" href="#feedback">Help Us Evaluate This Guide</a>
         </div>
       ) : (
         <>

@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && tsc -p tsconfig.api.json && vite build",
+    "test": "node --test tests/feedback.test.ts tests/feedback-api.test.ts",
+    "report:feedback": "node --env-file-if-exists=.env.local scripts/feedback-report.mjs",
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {

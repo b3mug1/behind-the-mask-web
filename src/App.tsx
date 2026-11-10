@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ArrowDown, ArrowRight, Check, Copy, Printer, Share2 } from 'lucide-react'
 import { Header } from './components/Header'
 import { MaskVisual } from './components/MaskVisual'
+import { FeedbackSection } from './components/FeedbackSection'
 import { Reveal } from './components/Reveal'
 import { ScenarioExperience } from './components/ScenarioExperience'
 import { principles, team } from './data/content'
@@ -144,6 +145,8 @@ function App() {
             </div>
           </section>
 
+          <FeedbackSection />
+
           <section id="philosophy" className="section philosophy-section">
             <div className="site-container">
               <Reveal className="section-heading"><p className="section-index">04 / THE PHILOSOPHY</p><h2>TWO PHILOSOPHERS.<br /><em>ONE QUESTION.</em></h2></Reveal>
@@ -172,7 +175,7 @@ function App() {
           </section>
         </main>
         <footer className="site-footer">
-          <div className="site-container footer-grid"><div><p className="footer-brand">BEHIND THE MASK<span>.</span></p><p>The Morality of Anonymity<br />Astana IT University · Philosophy Endterm Social Project</p><p className="footer-note">Created as an educational student initiative.</p></div><div><p className="footer-label">THE TEAM</p><ul>{team.map((member) => <li key={member}>{member}</li>)}</ul></div><div className="footer-back"><a href="#top">Back to top ↑</a></div></div>
+          <div className="site-container footer-grid"><div><p className="footer-brand">BEHIND THE MASK<span>.</span></p><p>The Morality of Anonymity<br />Astana IT University · Philosophy Endterm Social Project</p><p className="footer-note">Created as an educational student initiative.</p></div><div><p className="footer-label">THE TEAM</p><ul>{team.map((member) => <li key={member}>{member}</li>)}</ul></div><div className="footer-back"><a href="#top">Back to top ↑</a><br /><a href="#feedback">Share anonymous feedback ↗</a></div></div>
         </footer>
       </div>
       <PrintSheet />

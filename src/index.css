@@ -327,6 +327,56 @@ a { color: inherit; }
   .footer-back { grid-column: auto; }
 }
 
+/* Anonymous feedback */
+.feedback-section { background: var(--navy); }
+.feedback-heading { margin-bottom: 58px; }
+.feedback-description { color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 560px; margin-top: 20px; }
+.feedback-shell { border: 1px solid var(--border); background: var(--panel); padding: 46px 38px 38px; display: grid; gap: 34px; }
+.feedback-thanks { padding: 80px min(8vw, 90px); min-height: 380px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.feedback-thanks h2 { font-size: clamp(40px, 5vw, 72px); line-height: 1.06; letter-spacing: -.065em; margin: 26px 0 0; font-weight: 750; }
+.feedback-thanks h2 span { color: #60a5fa; }
+.feedback-thanks p { max-width: 640px; color: #cbd5e1; font-size: 18px; line-height: 1.6; margin: 25px 0 36px; }
+.feedback-consent-notice { border-left: 2px solid var(--blue); padding: 2px 0 2px 18px; }
+.feedback-consent-notice p { color: #cbd5e1; font-size: 15px; line-height: 1.6; max-width: 720px; }
+.feedback-question { border: 0; padding: 0; margin: 0; min-width: 0; }
+.feedback-question:disabled { opacity: .6; }
+.feedback-question legend { color: #f8fafc; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.25; letter-spacing: -.03em; font-weight: 700; padding: 0; margin-bottom: 18px; }
+.feedback-number { display: block; color: #93c5fd; font-size: 11px; letter-spacing: .15em; font-weight: 800; margin-bottom: 10px; }
+.feedback-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.feedback-option { position: relative; display: flex; align-items: center; gap: 16px; padding: 16px 19px; min-height: 58px; border: 1px solid #475569; color: var(--paper); background: #263244; font-size: 15px; line-height: 1.4; cursor: pointer; transition: background .2s, border-color .2s; }
+.feedback-option:hover { border-color: #93c5fd; background: #2b3b53; }
+.feedback-option.is-selected { border-color: #60a5fa; background: #173763; }
+.feedback-option:focus-within { outline: 3px solid #60a5fa; outline-offset: 3px; }
+.feedback-radio { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.feedback-option-label { flex: 1; }
+.feedback-option .option-indicator { margin-left: auto; }
+.feedback-option.is-selected .option-indicator { background: var(--blue); border-color: #93c5fd; box-shadow: inset 0 0 0 4px #173763; }
+.feedback-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.feedback-consent { position: relative; display: flex; align-items: flex-start; gap: 14px; cursor: pointer; color: #e2e8f0; font-size: 15px; line-height: 1.5; }
+.feedback-consent input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.feedback-check { width: 22px; height: 22px; flex: none; display: inline-grid; place-items: center; border: 1px solid #94a3b8; background: #263244; color: #fff; margin-top: 1px; }
+.feedback-consent.is-checked .feedback-check { background: var(--blue); border-color: var(--blue); }
+.feedback-consent:focus-within .feedback-check { outline: 3px solid #60a5fa; outline-offset: 3px; }
+.feedback-actions { display: grid; gap: 14px; justify-items: start; }
+.feedback-actions .button:disabled { opacity: .44; cursor: not-allowed; }
+.feedback-status { color: #fca5a5; font-size: 14px; min-height: 20px; }
+.feedback-option, .feedback-consent, .feedback-check { min-height: 44px; }
+.feedback-question legend + .feedback-options { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .feedback-options { grid-template-columns: 1fr; }
+  .feedback-shell { padding: 34px 26px 28px; }
+  .feedback-thanks { padding: 60px 24px; }
+}
+
+@media (max-width: 600px) {
+  .feedback-shell { padding: 28px 20px 24px; gap: 28px; }
+  .feedback-question legend { font-size: 20px; }
+  .feedback-option { font-size: 14px; padding: 13px 14px; }
+  .feedback-thanks h2 { font-size: 42px; }
+  .feedback-actions .button { width: 100%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
