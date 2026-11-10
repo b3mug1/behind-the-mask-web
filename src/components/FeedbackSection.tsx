@@ -120,8 +120,9 @@ export function FeedbackSection() {
 
           <div className="feedback-honeypot" aria-hidden="true">
             <label>
-              Website
-              <input type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(event) => setWebsite(event.target.value)} />
+              Leave this field empty
+              {/* Browser autofill fills fields named "website"/"url"; a neutral name avoids false spam rejections. */}
+              <input type="text" name="contact_note" tabIndex={-1} autoComplete="new-password" value={website} onChange={(event) => setWebsite(event.target.value)} />
             </label>
           </div>
 
