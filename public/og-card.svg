@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827"/>
+  <rect width="16" height="630" fill="#3B82F6"/>
+  <text x="78" y="108" fill="#94A3B8" font-size="28" font-family="Arial, sans-serif" font-weight="700" letter-spacing="3">ASTANA IT UNIVERSITY / PHILOSOPHY</text>
+  <text x="76" y="276" fill="#F8FAFC" font-size="96" font-family="Arial, sans-serif" font-weight="700">BEHIND</text>
+  <text x="76" y="378" fill="#F8FAFC" font-size="96" font-family="Arial, sans-serif" font-weight="700">THE MASK.</text>
+  <text x="82" y="472" fill="#94A3B8" font-size="31" font-family="Arial, sans-serif">THE MORALITY OF ANONYMITY</text>
+  <path d="M993 129c-101 0-169 78-169 183s68 183 169 183V129Z" fill="#F8FAFC"/>
+  <path d="M993 129c101 0 169 78 169 183s-68 183-169 183V129Z" fill="#3B82F6"/>
+  <circle cx="928" cy="300" r="15" fill="#111827"/><circle cx="1058" cy="300" r="15" fill="#111827"/>
+  <path d="M928 404h130" stroke="#111827" stroke-width="8" stroke-linecap="round"/>
+</svg>
