@@ -70,13 +70,18 @@ a { color: inherit; }
 .hero-copy h2 { font-size: clamp(25px, 2.5vw, 35px); line-height: 1.2; letter-spacing: -.04em; max-width: 625px; font-weight: 650; }
 .hero-description { font-size: 16px; line-height: 1.7; color: var(--muted); max-width: 600px; margin-top: 18px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 33px; }
-.mask-stage { position: relative; min-height: 590px; display: grid; place-items: center; }
+.mask-stage { position: relative; min-height: 590px; padding-bottom: 76px; display: grid; place-items: center; }
 .mask-art { width: min(100%, 515px); filter: drop-shadow(0 22px 60px rgba(0,0,0,.12)); }
-.mask-orbit { position: absolute; border: 1px solid #263549; border-radius: 50%; aspect-ratio: 1; pointer-events: none; }
+.mask-orbit { position: absolute; top: calc(50% - 38px); transform: translateY(-50%); border: 1px solid #263549; border-radius: 50%; aspect-ratio: 1; pointer-events: none; }
 .mask-orbit-one { width: min(93%, 570px); }
 .mask-orbit-two { width: min(68%, 420px); }
-.mask-caption { position: absolute; bottom: 5px; left: 10%; right: 10%; display: flex; gap: 16px; align-items: center; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .17em; }
-.mask-caption-line { height: 1px; background: #526176; flex: 1; }
+.mask-caption { position: absolute; bottom: 0; left: 8%; right: 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.mask-key { border-top: 3px solid var(--paper); padding-top: 12px; }
+.mask-key-hidden { border-color: var(--blue); }
+.mask-key-title { display: flex; align-items: center; gap: 8px; color: var(--paper); font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.mask-key-hidden .mask-key-title { color: #93c5fd; }
+.mask-key-title svg { flex-shrink: 0; }
+.mask-key-description { display: block; margin-top: 5px; color: #cbd5e1; font-size: 12px; line-height: 1.4; }
 .mask-coordinate { position: absolute; top: 22px; right: 0; font-size: 11px; letter-spacing: .14em; color: #64748b; }
 .scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); text-decoration: none; display: flex; align-items: center; gap: 12px; white-space: nowrap; color: var(--muted); font-weight: 700; font-size: 10px; letter-spacing: .17em; }
 
@@ -276,7 +281,9 @@ a { color: inherit; }
   .mask-art { width: min(100%, 315px); }
   .mask-orbit-one { width: 95%; }
   .mask-orbit-two { width: 72%; }
-  .mask-caption { bottom: -4px; font-size: 9px; }
+  .mask-caption { left: 4%; right: 4%; gap: 16px; }
+  .mask-key-title { font-size: 12px; gap: 6px; }
+  .mask-key-description { font-size: 11px; }
   .mask-coordinate { top: 4px; font-size: 9px; }
   .scroll-cue { bottom: 19px; }
   .problem-intro p { font-size: 16px; }
