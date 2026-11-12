@@ -76,8 +76,8 @@ a { color: inherit; }
 .mask-orbit-one { width: min(93%, 570px); }
 .mask-orbit-two { width: min(68%, 420px); }
 .mask-caption { position: absolute; bottom: 0; left: 8%; right: 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.mask-key { border-top: 3px solid var(--paper); padding-top: 12px; }
-.mask-key-hidden { border-color: var(--blue); }
+.mask-key { border-top: 3px solid #e7b89b; padding-top: 12px; }
+.mask-key-hidden { border-color: #bfdbfe; }
 .mask-key-title { display: flex; align-items: center; gap: 8px; color: var(--paper); font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .mask-key-hidden .mask-key-title { color: #93c5fd; }
 .mask-key-title svg { flex-shrink: 0; }
